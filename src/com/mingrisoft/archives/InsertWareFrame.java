@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -40,9 +40,14 @@ public class InsertWareFrame extends JFrame {
 	private JLabel label_2;
 	private JLabel label_3;
 	private JLabel label_4;
+	
+	*/
+	
 	/**
 	 * Create the frame.
 	 */
+
+/*
 	public InsertWareFrame() {
 		setTitle("添加货品窗体");	
 		setBounds(100, 100, 635, 267);
@@ -197,3 +202,4 @@ public class InsertWareFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+*/

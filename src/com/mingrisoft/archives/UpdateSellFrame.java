@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -43,9 +43,14 @@ public class UpdateSellFrame extends JFrame {
 	private JButton closeButton;
 	JTextArea remarkTextArea = new JTextArea();
 	Sell sell = null;
+	
+	
+	*/
 	/**
 	 * Create the frame.
 	 */
+
+/*
 	public UpdateSellFrame() {
 		setTitle("修改销售商窗体");	
 		SellDao dao = new SellDao();
@@ -201,3 +206,4 @@ public class UpdateSellFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+*/

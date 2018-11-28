@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -38,11 +38,13 @@ public class UpdateWareFrame extends JFrame {
 	private JButton closeButton;
 	Ware ware = null;
 	WareDao dao = new WareDao();
-
+*/
 	/**
 	 * Create the frame.
 	 */
-	public UpdateWareFrame() {
+	
+/*
+public UpdateWareFrame() {
 		setTitle("修改货品窗体");	
 	
 		 try {
@@ -211,3 +213,4 @@ public class UpdateWareFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+*/

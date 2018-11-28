@@ -18,16 +18,16 @@ import javax.swing.tree.TreeSelectionModel;
 import com.mingrisodft.util.Session;
 import com.mingrisoft.bean.User;
 import com.mingrisoft.panel.ClockPanel;
-import com.mingrisoft.panel.DepotPanel;
-import com.mingrisoft.panel.DeptPanel;
-import com.mingrisoft.panel.FeelWarePanel;
+//import com.mingrisoft.panel.DepotPanel;
+//import com.mingrisoft.panel.DeptPanel;
+//import com.mingrisoft.panel.FeelWarePanel;
 import com.mingrisoft.panel.JoinDepotPanel;
 import com.mingrisoft.panel.MyJPanel;
 import com.mingrisoft.panel.OutDepotPanel;
-import com.mingrisoft.panel.PersonnelPanel;
-import com.mingrisoft.panel.SellPanel;
+//import com.mingrisoft.panel.PersonnelPanel;
+//import com.mingrisoft.panel.SellPanel;
 import com.mingrisoft.panel.StockPanel;
-import com.mingrisoft.panel.WarePanel;
+//import com.mingrisoft.panel.WarePanel;
 import com.mingrisoft.widget.BGPanel;
 import com.mingrisoft.widget.CalendarPanel;
 import com.mingrisoft.widget.SmallScrollPanel;
@@ -48,17 +48,17 @@ public class RemoveButtomFrame extends JFrame {
 	private SmallScrollPanel moduleButtonGroup = null;
 	private JTree tree;
 	private JPanel panel;
-	FeelWarePanel panelFeel = new FeelWarePanel();
+//	FeelWarePanel panelFeel = new FeelWarePanel();
 	JPanel panel_1 = new JPanel();
-	JLabel fristLabel = new JLabel("基本档案管理");
+	JLabel fristLabel = new JLabel("尚未选择");
 	private BGPanel jPanel = null;
 	private ButtonGroup buttonGroup = null;
 	private GlassButton workSpaceButton = null;
 	private GlassButton progressButton = null;
 	private GlassButton bookProjectButton = null;
 	private GlassButton chukuButton = null;
-	private GlassButton personnelManagerButton = null;
-	private GlassButton deptManagerButton = null;
+//	private GlassButton personnelManagerButton = null;
+//	private GlassButton deptManagerButton = null;
 	JLabel label_1 = new JLabel("您当前的位置是：");
 	/**
 	 * Create the frame.
@@ -112,7 +112,7 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 			label_1.setVerticalAlignment(SwingConstants.BOTTOM);
 			label_1.setBounds(38, 38, 96, 15);
 			backPanel
-					.setBorder(createTitledBorder(null, "基本档案管理",
+					.setBorder(createTitledBorder(null, "未选择",
 							TitledBorder.DEFAULT_JUSTIFICATION,
 							TitledBorder.TOP, new Font("sansserif", Font.BOLD,
 									12), new Color(59, 59, 59)));
@@ -124,26 +124,29 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 			backPanel.add(panel_1);
 			JScrollPane scrollPane = new JScrollPane();
 			panel_1.add(scrollPane);
+		/*
 			JScrollPane scrollPane_1 = new JScrollPane();
 			scrollPane_1.setBackground(new Color(71,201,223));
 			scrollPane_1.setBounds(0, 0, 138, 334);
 			panel_1.add(scrollPane_1);
 			DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(
-					"基本档案管理");
+					"基本档案管理1");
 			DefaultMutableTreeNode childNode1 = new DefaultMutableTreeNode(
-					"供货商管理");
+					"供货商管理1");
 			DefaultMutableTreeNode childNode2 = new DefaultMutableTreeNode(
-					"销售商管理");
+					"销售商管理1");
 			DefaultMutableTreeNode childNode3 = new DefaultMutableTreeNode(
-					"货品档案管理");
+					"货品档案管理1");
 			DefaultMutableTreeNode childNode4 = new DefaultMutableTreeNode(
-					"仓库管理");
+					"仓库管理1"); 
 			rootNode.add(childNode1);
 			rootNode.add(childNode2);
 			rootNode.add(childNode3);
 			rootNode.add(childNode4);
 			tree = new JTree(rootNode);
+			
 			scrollPane_1.setColumnHeaderView(tree);
+			
 			final JPanel sellPanel = new JPanel();
 			sellPanel.setBackground(new Color(71,201,223));
 			sellPanel.setBounds(138, 0, 473, 343);
@@ -158,7 +161,7 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 			tree.addTreeSelectionListener(new TreeSelectionListener() {
 				@Override
 				public void valueChanged(TreeSelectionEvent e) {
-					if (!tree.isSelectionEmpty()) {
+				/*		if (!tree.isSelectionEmpty()) {
 						TreePath selectionPaths = tree.getSelectionPath();
 						Object path = selectionPaths.getLastPathComponent();
 						DefaultMutableTreeNode node = (DefaultMutableTreeNode) path;
@@ -191,7 +194,7 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 					}
 				}
 			});
-
+*/
 		}
 		return backPanel;
 	}
@@ -231,26 +234,26 @@ public BGPanel getJPanel() {
 		jPanel.setPreferredSize(new Dimension(400, 50));
 		jPanel.setOpaque(false);
 		// 添加按钮
-		jPanel.add(getWorkSpaceButton(), null);
+	//	jPanel.add(getWorkSpaceButton(), null);
 		jPanel.add(getProgressButton(), null);
 		jPanel.add(getrukuButton(), null);
 		jPanel.add(getchukuButton(), null);
-		jPanel.add(getPersonnelManagerButton(), null);
-		jPanel.add(getDeptManagerButton(), null);
+	//	jPanel.add(getPersonnelManagerButton(), null);
+	//	jPanel.add(getDeptManagerButton(), null);
 		if (buttonGroup == null) {
 			buttonGroup = new ButtonGroup();
 		}
 		// 把所有按钮添加到一个组控件中
 		buttonGroup.add(getProgressButton());
-		buttonGroup.add(getWorkSpaceButton());
+	//	buttonGroup.add(getWorkSpaceButton());
 		buttonGroup.add(getrukuButton());
 		buttonGroup.add(getchukuButton());
-		buttonGroup.add(getPersonnelManagerButton());
-		buttonGroup.add(getDeptManagerButton());
+	//	buttonGroup.add(getPersonnelManagerButton());
+	//	buttonGroup.add(getDeptManagerButton());
 	}
 	return jPanel;
 }
-
+/*
 	// 基本档案管理按钮
 private GlassButton getWorkSpaceButton() {
 	if (workSpaceButton == null) {
@@ -267,7 +270,7 @@ private GlassButton getWorkSpaceButton() {
 	}
 	return workSpaceButton;
 }
-
+*/
 	// 采购进货管理按钮
 	private GlassButton getProgressButton() {
 		if (progressButton == null) {
@@ -285,7 +288,7 @@ private GlassButton getWorkSpaceButton() {
 		return progressButton;
 	}
 
-	// 仓库管理
+	// 仓库ruku管理
 	private GlassButton getrukuButton() {
 		if (bookProjectButton == null) {
 			bookProjectButton = new GlassButton();
@@ -317,7 +320,7 @@ private GlassButton getWorkSpaceButton() {
 		}
 		return chukuButton;
 	}
-
+	/*
 	// 人员管理系统
 	private GlassButton getPersonnelManagerButton() {
 		if (personnelManagerButton == null) {
@@ -360,12 +363,13 @@ private GlassButton getWorkSpaceButton() {
 		}
 		return deptManagerButton;
 	}
-
+*/
 	class toolsButtonActionAdapter implements ActionListener {
 
 		@Override
+	
 		public void actionPerformed(ActionEvent e) {
-			if (e.getSource() == workSpaceButton) {
+			/*		if (e.getSource() == workSpaceButton) {
 				backPanel.removeAll();
 				backPanel.add(label_1);
 				fristLabel.setBounds(133, 38, 123, 15);
@@ -375,6 +379,7 @@ private GlassButton getWorkSpaceButton() {
 				fristLabel.setText("基本档案管理");
 				repaint();
 			}
+			*/
 			if (e.getSource() == progressButton) {
 				backPanel.removeAll();
 				backPanel.add(label_1);
@@ -408,6 +413,7 @@ private GlassButton getWorkSpaceButton() {
 				fristLabel.setText("仓库出库");
 				repaint();
 			}
+			/*
 			if (e.getSource() == deptManagerButton) {
 				backPanel.removeAll();
 				backPanel.add(label_1);
@@ -419,6 +425,8 @@ private GlassButton getWorkSpaceButton() {
 				fristLabel.setText("部门管理");
 				repaint();
 			}
+			
+			
 			if (e.getSource() == personnelManagerButton) {
 				backPanel.removeAll();			
 				panel_1.setBounds(10, 63, 611, 386);
@@ -426,6 +434,7 @@ private GlassButton getWorkSpaceButton() {
 				backPanel.add(panel);				
 				repaint();
 			}
+			*/
 		}
 
 	}

@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -48,9 +48,13 @@ public class InsertProvideFrame extends JFrame {
 	private JLabel label_4;
 	private JLabel label_5;
 	private JLabel label_6;
+	
+	
+	*/
 	/**
 	 * Create the frame.
 	 */
+/*
 	public InsertProvideFrame() {
 		setTitle("添加供应商窗体");	
 		setBounds(100, 100, 635, 475);
@@ -236,3 +240,6 @@ public class InsertProvideFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+
+
+*/

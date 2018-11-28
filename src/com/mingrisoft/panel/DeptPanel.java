@@ -1,5 +1,5 @@
 package com.mingrisoft.panel;
-
+/*
 import static javax.swing.BorderFactory.createTitledBorder;
 
 import java.awt.Color;
@@ -54,9 +54,14 @@ public class DeptPanel extends JPanel {
 	private JTable table_1;
 	private DeptDao dao = new DeptDao();
 	JComboBox comboBox ;
+	
+	
+	*/
 	/**
 	 * Create the panel.
 	 */
+
+/*
 	public DeptPanel() {
 		this.setBorder(createTitledBorder(null, "部门管理",
                 TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.TOP, new Font(
@@ -177,3 +182,4 @@ public class DeptPanel extends JPanel {
 	}
 	
 }
+*/

@@ -1,5 +1,7 @@
 package com.mingrisoft.archives;
+/*
 import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -44,9 +46,10 @@ public class InserSellFrame extends JFrame {
 	private JLabel label_4;
 	private JLabel label_5;
 	private JLabel label_6;
-	/**
-	 * Create the frame.
-	 */
+	
+	// Create the frame.   
+
+
 	public InserSellFrame() {
 		setTitle("添加销售商窗体");	
 		setBounds(100, 100, 635, 475);
@@ -232,3 +235,6 @@ public class InserSellFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+
+
+*/

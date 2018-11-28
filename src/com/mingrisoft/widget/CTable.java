@@ -7,7 +7,7 @@ import javax.swing.*;
 import javax.swing.table.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreePath;
-
+/*
 public class CTable extends JTree {
     public CTable() {
     	  
@@ -32,3 +32,4 @@ public class CTable extends JTree {
     
     
 }
+*/

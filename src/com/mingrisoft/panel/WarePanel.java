@@ -1,5 +1,5 @@
 package com.mingrisoft.panel;
-
+/*
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -28,9 +28,11 @@ public class WarePanel extends JPanel {
 	private JTable table;	
 	WareDao wareDao = new WareDao();
 	WareModel wareModel = new WareModel();
+	*/
 	/**
 	 * Create the panel.
 	 */
+/*
 	public WarePanel() {
 	}
 	public JPanel getMessage() {
@@ -150,3 +152,4 @@ public class WarePanel extends JPanel {
 		return message;
 	}
 }
+*/

@@ -1,5 +1,5 @@
 package com.mingrisoft.panel;
-
+/*
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -23,9 +23,13 @@ public class FeelWarePanel extends JPanel {
 	private JTextField addressTextField;
 	FeelDao feelDao = new FeelDao();
 	LocalTableModel model = new LocalTableModel();
+	
+	*/
 	/**
 	 * Create the panel.
 	 */
+
+/*
 	public FeelWarePanel() {
 
 	}
@@ -190,3 +194,4 @@ public class FeelWarePanel extends JPanel {
 	}
 
 }
+*/

@@ -1,5 +1,5 @@
 package com.mingrisoft.panel;
-
+/*
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -28,9 +28,11 @@ public class SellPanel extends JPanel {
 	private JTextField addressTextField;
 	SellDao sellDao = new SellDao();
 	LocalTableModel model = new LocalTableModel();
+	*/
 	/**
 	 * Create the panel.
 	 */
+/*
 	public SellPanel() {
 
 	}
@@ -194,3 +196,4 @@ public class SellPanel extends JPanel {
 	}
 
 }
+*/

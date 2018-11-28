@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -45,10 +45,12 @@ public class UpdatePersonnelFrame extends JFrame {
 	BasicMessage message = new BasicMessage();
 	Contact contact = new Contact();
 	int hid = 0;	
-
+*/
 	/**
 	 * Create the frame.
 	 */
+
+/*
 	public UpdatePersonnelFrame() {		
 		setBounds(100, 100, 512, 284);
 		setTitle("修改员工信息窗体");
@@ -336,3 +338,4 @@ public class UpdatePersonnelFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+*/

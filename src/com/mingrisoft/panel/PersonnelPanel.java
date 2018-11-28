@@ -1,4 +1,5 @@
 package com.mingrisoft.panel;
+/*
 import static javax.swing.BorderFactory.createTitledBorder;
 import java.awt.Color;
 import java.awt.Font;
@@ -351,3 +352,4 @@ deleteButton.addActionListener(new ActionListener() {
 		return contentPanel;
 	}	
 }
+*/

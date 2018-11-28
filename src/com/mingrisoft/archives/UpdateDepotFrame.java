@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -35,9 +35,16 @@ public class UpdateDepotFrame extends JFrame {
 	JTextArea textArea = new JTextArea();
 	DepotDao dao = new DepotDao();
 	Depot depot ;
+	
+	
+	*/
+
+
 	/**
 	 * Create the frame.
 	 */
+
+/*
 	public UpdateDepotFrame() {
 		setTitle("修改仓库信息窗体");	
 		setBounds(100, 100, 635, 267);
@@ -115,3 +122,6 @@ public class UpdateDepotFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+
+
+*/

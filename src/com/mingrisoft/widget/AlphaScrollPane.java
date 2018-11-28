@@ -43,9 +43,9 @@ public class AlphaScrollPane extends JScrollPane {
                 JViewport header = getColumnHeader();
                 if (header != null) {
                     // header.setBackground(getBackground());
-                    JComponent view = (JComponent) header.getView();
-                    if (view instanceof CTable)
-                        view.setOpaque(isOpaque());
+              JComponent view = (JComponent) header.getView();
+                /*     if (view instanceof CTable)
+                        view.setOpaque(isOpaque());  */
                     header.setOpaque(headerOpaquae);
                 }
                 getViewport().setOpaque(isOpaque());// 使滚动视图透明

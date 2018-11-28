@@ -1,5 +1,5 @@
 package com.mingrisoft.panel;
-
+/*
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -28,9 +28,11 @@ public class DepotPanel extends JPanel {
 	private JTextField managerTextField;
 	DepotDao dao = new DepotDao();
 	DepotModel model = new DepotModel();
+	*/
 	/**
 	 * Create the panel.
 	 */
+/*
 	public DepotPanel() {
 
 	}
@@ -190,3 +192,4 @@ public class DepotPanel extends JPanel {
 	}
 
 }
+*/

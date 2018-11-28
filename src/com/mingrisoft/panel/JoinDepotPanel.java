@@ -27,9 +27,10 @@ import java.util.List;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
+import com.mingrisoft.archives.*;//自己家的
 import com.mingrisoft.archives.InserJoinDepotFrame;
-import com.mingrisoft.archives.UpdateJoinDepotFrame;
-import com.mingrisoft.archives.UpdateProvideFrame;
+//import com.mingrisoft.archives.UpdateJoinDepotFrame;
+//import com.mingrisoft.archives.UpdateProvideFrame;
 import com.mingrisoft.bean.Depot;
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.Stock;

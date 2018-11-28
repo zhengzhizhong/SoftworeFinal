@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -43,9 +43,12 @@ public class InsertPersonnelFrame extends JFrame {
 	BasicMessage message = new BasicMessage();
 	int hid = 0;	
 	String nameMessgae = "";
+	
+	*/
 	/**
 	 * Create the frame.
 	 */
+/*
 	public InsertPersonnelFrame() {		
 		setBounds(100, 100, 512, 284);
 		setTitle("添加员工信息窗体");
@@ -309,3 +312,6 @@ insertutton.addActionListener(new ActionListener() {
 		this.setVisible(false);
 	}
 }
+
+
+*/

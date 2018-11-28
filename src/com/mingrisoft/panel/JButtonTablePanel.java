@@ -11,8 +11,9 @@ import javax.swing.JButton;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
-import com.mingrisoft.archives.InserStockFrame;
-import com.mingrisoft.archives.UpdateDepotFrame;
+import com.mingrisoft.archives.*;   //自己添加的
+//import com.mingrisoft.archives.InserStockFrame;
+//import com.mingrisoft.archives.UpdateDepotFrame;
 import com.mingrisoft.archives.UpdateStockFrame;
 import com.mingrisoft.bean.Stock;
 import com.mingrisoft.dao.StockDao;

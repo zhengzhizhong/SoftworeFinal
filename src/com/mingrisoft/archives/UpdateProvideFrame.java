@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -41,9 +41,14 @@ public class UpdateProvideFrame extends JFrame {
 	private JButton closeButton;
 	JTextArea remarkTextArea = new JTextArea();
 	Provide provide = null;
+	
+	
+	*/
 	/**
 	 * Create the frame.
 	 */
+
+/*
 	public UpdateProvideFrame() {
 		setTitle("修改供应商窗体");	
 		
@@ -202,3 +207,4 @@ public class UpdateProvideFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+*/

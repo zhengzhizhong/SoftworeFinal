@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -34,10 +34,11 @@ public class InsertDeptFrame extends JFrame {
 	private JLabel starLabel;
 	JTextArea textArea = new JTextArea();
 	private JTextField managerTextField;	
-
+*/
 	/**
 	 * Create the frame.
 	 */
+/*
 	public InsertDeptFrame() {
 		setTitle("添加部门信息窗体");	
 		setBounds(100, 100, 635, 267);
@@ -121,3 +122,6 @@ public class InsertDeptFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+
+
+*/

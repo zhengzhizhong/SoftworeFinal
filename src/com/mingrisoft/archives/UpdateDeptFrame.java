@@ -1,5 +1,5 @@
 package com.mingrisoft.archives;
-
+/*
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -38,10 +38,13 @@ public class UpdateDeptFrame extends JFrame {
 	private JTextField managerTextField;
 	Dept dept = new Dept();
 	DeptDao dao = new DeptDao();	
-
+*/
 	/**
 	 * Create the frame.
 	 */
+
+
+/*
 	public UpdateDeptFrame() {
 		setTitle("修改部门信息窗体");	
 		setBounds(100, 100, 635, 267);
@@ -136,3 +139,4 @@ public class UpdateDeptFrame extends JFrame {
 		this.setVisible(false);
 	}
 }
+*/

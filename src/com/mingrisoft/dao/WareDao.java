@@ -1,4 +1,5 @@
 package com.mingrisoft.dao;
+/*
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,6 +8,8 @@ import java.sql.Statement;
 import java.util.*;
 import com.mingrisoft.bean.Ware;
 public class WareDao {
+	
+	
 	// 定义添加货品方法
 	GetConnection connection = new GetConnection();
 	Connection conn = null;
@@ -134,3 +137,4 @@ public class WareDao {
 	}
 	
 }
+*/

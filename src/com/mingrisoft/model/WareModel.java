@@ -1,4 +1,6 @@
 package com.mingrisoft.model;
+/*
+//»õÎï
 public class WareModel extends javax.swing.table.DefaultTableModel {
 	Class[] types = new Class[] { java.lang.Object.class,
 			java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
@@ -13,4 +15,4 @@ public class WareModel extends javax.swing.table.DefaultTableModel {
 	public boolean isCellEditable(int rowIndex, int columnIndex) {
 		return canEdit[columnIndex];
 	}
-}
+}*/

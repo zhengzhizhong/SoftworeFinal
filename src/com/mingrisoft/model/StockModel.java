@@ -1,4 +1,4 @@
-package com.mingrisoft.model;
+package com.mingrisoft.model;//²É¹ºµ¥
 public class StockModel extends javax.swing.table.DefaultTableModel {
 	Class[] types = new Class[] { java.lang.Object.class,
 			java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, 

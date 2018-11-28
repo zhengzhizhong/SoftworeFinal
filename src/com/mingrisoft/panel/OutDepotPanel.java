@@ -29,6 +29,7 @@ import javax.swing.JTable;
 
 
 import com.mingrisoft.archives.*;//自己加的
+
 /*
 import com.mingrisoft.archives.InserJoinDepotFrame;
 import com.mingrisoft.archives.InserOutDepotFrame;
@@ -36,10 +37,13 @@ import com.mingrisoft.archives.UpdateJoinDepotFrame;
 import com.mingrisoft.archives.UpdateOutDepotFrame;
 import com.mingrisoft.archives.UpdateProvideFrame;
 */
+import com.mingrisoft.bean.*;
+/*
 import com.mingrisoft.bean.Depot;
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.OutDepot;
 import com.mingrisoft.bean.Stock;
+*/
 import com.mingrisoft.dao.JoinDepotDao;
 import com.mingrisoft.dao.OutDepotDao;
 import com.mingrisoft.dao.StockDao;

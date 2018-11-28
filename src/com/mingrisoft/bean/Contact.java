@@ -1,5 +1,5 @@
 package com.mingrisoft.bean;
-
+/*
 public class Contact {
 	private int id;
 	private int hid;
@@ -52,3 +52,4 @@ public class Contact {
 	}
 	
 }
+*/

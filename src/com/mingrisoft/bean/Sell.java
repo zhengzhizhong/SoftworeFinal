@@ -1,5 +1,5 @@
 package com.mingrisoft.bean;
-
+/*
 public class Sell {
 	private int id;
 	private String sellName;
@@ -80,3 +80,4 @@ public class Sell {
 	}
 	
 }
+*/

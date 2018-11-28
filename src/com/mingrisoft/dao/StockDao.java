@@ -7,10 +7,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.mingrisoft.bean.*;
+/*
 import com.mingrisoft.bean.Sell;
 import com.mingrisoft.bean.Stock;
-
+*/
 public class StockDao {
 
 	GetConnection connection = new GetConnection();
@@ -33,9 +34,10 @@ public void insertStock(Stock stock) {
 	}
 }
 
+
 	// 定义查询采购订货表中全部数据方法
 	public List selectStock() {
-		List list = new ArrayList<Sell>();
+		List list = new ArrayList<Stock>();//原本是Sell
 		conn = connection.getCon();
 		try {
 			Statement statement = conn.createStatement();
@@ -57,9 +59,10 @@ public void insertStock(Stock stock) {
 
 		return list;
 	}
+
 	// 定义订单号查询仓库入库表数据方法
 	public int selectJoinStockByOid(String oid) {
-		List list = new ArrayList<Sell>();
+		List list = new ArrayList<Stock>();  //原本Sell
 		conn = connection.getCon();
 		int id = 0;
 		try {
@@ -74,6 +77,7 @@ public void insertStock(Stock stock) {
 
 		return id;
 	}
+
 	// 定义按货品名查询订单表数据方法
 public List selectStockBySName(String sName) {
 	List list = new ArrayList<Stock>();			//定义保存查询结果的List对象

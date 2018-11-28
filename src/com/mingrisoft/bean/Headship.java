@@ -1,5 +1,5 @@
 package com.mingrisoft.bean;
-
+/*
 public class Headship {
 	private int id;
 	private String headshipName;
@@ -17,3 +17,4 @@ public class Headship {
 	}
 	
 }
+*/

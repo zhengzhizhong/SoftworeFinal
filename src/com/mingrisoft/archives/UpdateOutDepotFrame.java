@@ -10,17 +10,22 @@ import javax.swing.JTextArea;
 import javax.swing.JButton;
 
 import com.mingrisodft.util.GetDate;
+import com.mingrisoft.bean.*;
+/*
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.OutDepot;
 import com.mingrisoft.bean.Provide;
 import com.mingrisoft.bean.Sell;
 import com.mingrisoft.bean.Stock;
+*/
+import com.mingrisoft.dao.*;
+/*
 import com.mingrisoft.dao.FeelDao;
 import com.mingrisoft.dao.JoinDepotDao;
 import com.mingrisoft.dao.OutDepotDao;
 import com.mingrisoft.dao.SellDao;
 import com.mingrisoft.dao.StockDao;
-
+*/
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;

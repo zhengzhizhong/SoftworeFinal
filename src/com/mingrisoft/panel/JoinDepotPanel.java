@@ -31,9 +31,12 @@ import com.mingrisoft.archives.*;//自己家的
 import com.mingrisoft.archives.InserJoinDepotFrame;
 //import com.mingrisoft.archives.UpdateJoinDepotFrame;
 //import com.mingrisoft.archives.UpdateProvideFrame;
+import com.mingrisoft.bean.*;//jiade 
+/*
 import com.mingrisoft.bean.Depot;
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.Stock;
+*/
 import com.mingrisoft.dao.JoinDepotDao;
 import com.mingrisoft.dao.StockDao;
 import com.mingrisoft.model.JoinDepotModel;

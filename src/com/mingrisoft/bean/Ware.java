@@ -1,5 +1,5 @@
 package com.mingrisoft.bean;
-
+/*
 public class Ware {
 	private int id;
 	private String wareName;
@@ -53,3 +53,4 @@ public class Ware {
 	}
 	
 }
+*/

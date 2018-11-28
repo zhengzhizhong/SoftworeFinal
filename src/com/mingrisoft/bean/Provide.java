@@ -1,5 +1,5 @@
 package com.mingrisoft.bean;
-
+/*
 public class Provide {
 	private int id;
 	private String cName;
@@ -86,3 +86,4 @@ public class Provide {
 		this.remark = remark;
 	}
 }
+*/

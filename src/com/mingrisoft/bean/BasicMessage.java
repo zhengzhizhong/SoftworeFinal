@@ -1,5 +1,5 @@
 package com.mingrisoft.bean;
-
+/*
 public class BasicMessage {
 	private int id;
 	private String name;
@@ -46,3 +46,4 @@ public class BasicMessage {
 	}
 	
 }
+*/

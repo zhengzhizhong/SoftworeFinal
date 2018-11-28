@@ -7,12 +7,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.mingrisoft.bean.*;
+/*
 import com.mingrisoft.bean.Depot;
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.OutDepot;
 import com.mingrisoft.bean.Provide;
-
+*/
 public class OutDepotDao {
 	// 定义添加仓库信息方法
 	GetConnection connection = new GetConnection();
@@ -103,10 +104,11 @@ public class OutDepotDao {
 		}
 		return list;
 	}
+	
 	// 定义按仓库出库时间和仓库编号查询出库信息方法
 	public List selectOutDepotByTime(String outTime,int did) {		
 		conn = connection.getCon();
-		List list = new ArrayList<Provide>();
+		List list = new ArrayList<JoinDepot>();//原本Provide
 		try {
 			Statement statement = conn.createStatement();
 			String sql = "select * from tb_outDepot where joinTime = '" + outTime +"' and did = "+did;
@@ -126,6 +128,7 @@ public class OutDepotDao {
 		}
 		return list;
 	}
+	
 	// 定义按货品名称查询货品重量方法
 	public float selectJoinDepotAndDate(String wName,int did) {		
 		conn = connection.getCon();

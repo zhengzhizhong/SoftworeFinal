@@ -7,11 +7,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.mingrisoft.bean.*;
+/*
 import com.mingrisoft.bean.Depot;
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.Provide;
-
+*/
 public class JoinDepotDao {
 	// 定义添加仓库信息方法
 	GetConnection connection = new GetConnection();
@@ -33,9 +34,10 @@ public class JoinDepotDao {
 			e.printStackTrace();
 		}
 	}
+	
 	// 定义查询仓库入库表中全部数据方法
 	public List selectJoinDepot() {
-		List list = new ArrayList<Provide>();
+		List list = new ArrayList<JoinDepot>();//原本是Provide
 		conn = connection.getCon();
 		try {
 			Statement statement = conn.createStatement();
@@ -106,10 +108,11 @@ public class JoinDepotDao {
 		}
 		return list;
 	}
+
 	// 定义按仓库入库时间查询方法
 	public List selectJoinDepot(String joinTime) {		
 		conn = connection.getCon();
-		List list = new ArrayList<Provide>();
+		List list = new ArrayList<JoinDepot>();//yuanb Provide
 		try {
 			Statement statement = conn.createStatement();
 			String sql = "select * from tb_joinDepot where joinTime = '" + joinTime +"'";
@@ -130,10 +133,12 @@ public class JoinDepotDao {
 		}
 		return list;
 	}
+
+
 	// 定义按仓库入库时间和入库时间查询方法
 	public List selectJoinDepotAndDate(String oid,String joinTime) {		
 		conn = connection.getCon();
-		List list = new ArrayList<Provide>();
+		List list = new ArrayList<JoinDepot>();//yuanben Provide
 		try {
 			Statement statement = conn.createStatement();
 			String sql = "select * from tb_joinDepot where oid = '"+oid+"' and joinTime = '" + joinTime +"'";
@@ -154,6 +159,7 @@ public class JoinDepotDao {
 		}
 		return list;
 	}
+
 	// 定义修改仓库入库信息方法
 	public void updateJoinDepot(JoinDepot depot) {
 		conn = connection.getCon();

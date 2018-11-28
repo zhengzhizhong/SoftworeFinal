@@ -8,16 +8,20 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
-
+import com.mingrisoft.bean.*;
+/*
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.Provide;
 import com.mingrisoft.bean.Sell;
 import com.mingrisoft.bean.Stock;
+*/
+import com.mingrisoft.dao.*;
+/*
 import com.mingrisoft.dao.FeelDao;
 import com.mingrisoft.dao.JoinDepotDao;
 import com.mingrisoft.dao.SellDao;
 import com.mingrisoft.dao.StockDao;
-
+*/
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;

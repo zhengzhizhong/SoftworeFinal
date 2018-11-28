@@ -6,10 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
-
+import com.mingrisoft.bean.*;
+/*
 import com.mingrisoft.bean.Depot;
 import com.mingrisoft.bean.Provide;
-
+*/
 public class DepotDao {
 	// 定义添加仓库信息方法
 	GetConnection connection = new GetConnection();
@@ -27,6 +28,7 @@ public class DepotDao {
 			e.printStackTrace();
 		}
 	}
+	/*
 	// 定义查询仓库表中全部数据方法
 	public List selectDepot() {
 		List list = new ArrayList<Provide>();
@@ -46,7 +48,7 @@ public class DepotDao {
 		}
 		return list;
 	}
-
+*/
 	// 编写按编号查询仓库信息方法
 	public Depot selectDepotByid(int id) {
 		Depot depot = new Depot();
@@ -65,7 +67,7 @@ public class DepotDao {
 		}
 		return depot;
 	}
-
+/*
 	// 定义按仓库管理员查询仓库信息方法
 	public List selectDepotByManage(String manage) {
 		
@@ -87,6 +89,7 @@ public class DepotDao {
 		}
 		return list;
 	}
+	
 	// 定义按仓库管理员和仓库编号查询仓库信息方法
 	public List selectDepotByManageAndId(int id,String manage) {		
 		conn = connection.getCon();
@@ -107,7 +110,7 @@ public class DepotDao {
 		}
 		return list;
 	}
-
+*/
 	// 定义按仓库编号查询仓库信息方法
 	public Depot selectDepotById(int id) {		
 		conn = connection.getCon();

@@ -4,9 +4,12 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import com.mingrisodft.util.GetDate;
+import com.mingrisoft.bean.*;//Ìí¼ÓµÄ
+/*
 import com.mingrisoft.bean.Depot;
 import com.mingrisoft.bean.JoinDepot;
 import com.mingrisoft.bean.Stock;
+*/
 import com.mingrisoft.dao.DepotDao;
 import com.mingrisoft.dao.JoinDepotDao;
 import com.mingrisoft.dao.StockDao;

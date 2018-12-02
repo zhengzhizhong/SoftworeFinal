@@ -21,17 +21,17 @@ import javax.swing.JComboBox;
 import java.awt.event.ItemListener;
 import java.awt.event.ItemEvent;
 public class InserJoinDepotFrame extends JFrame {
-	private JPanel contentPane;
-	private JLabel dateLabel;
-	private JTextField wNameTextField;
-	private JLabel joinTimeLabel;
-	private JTextField joinTimeTextField;
-	private JLabel remarkLabel;
-	private JButton closeButton;
-	private JLabel starLabel;
-	private JLabel label_1;
-	private JLabel label_2;
-	private JLabel label_3;
+	private JPanel contentPane;//中间容器
+	private JLabel dateLabel;//货品标签
+	private JTextField wNameTextField;//货品名称（文本框）
+	private JLabel joinTimeLabel;//入库时间标签
+	private JTextField joinTimeTextField;//入库时间（文本框）
+	private JLabel remarkLabel;//简介标签
+	private JButton closeButton;//按钮 退出按钮
+	private JLabel starLabel;//*
+	private JLabel label_1;//*
+	private JLabel label_2;//*
+	private JLabel label_3;//*
 	JoinDepotDao dao = new JoinDepotDao();
 	private JComboBox dIdcomboBox;
 	JComboBox oIdcomboBox;
@@ -59,7 +59,7 @@ public class InserJoinDepotFrame extends JFrame {
 		dIdLabel.setBounds(315, 55, 74, 15);
 		contentPane.add(dIdLabel);
 
-		dateLabel = new JLabel(" 货品名称：");
+		dateLabel = new JLabel(" 货物名称：");
 		dateLabel.setBounds(41, 99, 70, 15);
 		contentPane.add(dateLabel);
 

@@ -124,7 +124,7 @@ if(mrem2!=null){
 Cookie  c1=new Cookie("userName",username);
 c1.setMaxAge(expiry);
 response.addCookie(c1);
-
+//
 
 }
 %>

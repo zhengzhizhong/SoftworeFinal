@@ -16,6 +16,7 @@ public class StockDao {
 
 	GetConnection connection = new GetConnection();
 	Connection conn = null;
+
 	// 定义添加采购订货方法
 public void insertStock(Stock stock) {
 	conn = connection.getCon();			//获取数据库连接
@@ -33,7 +34,6 @@ public void insertStock(Stock stock) {
 		e.printStackTrace();
 	}
 }
-
 
 	// 定义查询采购订货表中全部数据方法
 	public List selectStock() {
@@ -150,6 +150,7 @@ public List selectStockBySName(String sName) {
 		}
 		return list;
 	}
+
 	// 编写按编号查询订货信息方法
 public Stock selectStockByid(int id) {
 	Stock stock = new Stock();		//定义对与数据库对应的JavaBean对象
@@ -173,8 +174,8 @@ public Stock selectStockByid(int id) {
 	return stock;						//返回Stock对象
 }
 
-	
-	// 定义修改供应商信息方法
+
+	// 定义修改caigou信息方法
 public void updateStock(Stock stock) {
 	conn = connection.getCon();					//获取数据库连接
 	try {
@@ -194,7 +195,7 @@ public void updateStock(Stock stock) {
 	}
 }
 
-	// 定义删除供应商信息方法
+	// 定义删除caigou信息方法
 public void deleteStock(int id){
 	conn = connection.getCon();							//获取数据库连接
 	String sql = "delete from tb_stock where id ="+id;	//定义删除数据SQL语句

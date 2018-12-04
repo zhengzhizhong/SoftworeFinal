@@ -73,25 +73,25 @@ public class RemoveButtomFrame extends JFrame {
 		setTitle("超市管理系统");
 		contentPane.setLayout(null);
 		setResizable(false);
-		JPanel clockpanel = new JPanel();
-		clockpanel.setBackground(new Color(71,201,223));
-		clockpanel.setBounds(10, 124, 258, 245);
-		contentPane.add(clockpanel);
-		clockpanel.setLayout(null);
+	//	JPanel clockpanel = new JPanel();
+	//	clockpanel.setBackground(new Color(71,201,223));
+	//	clockpanel.setBounds(10, 124, 258, 245);
+	//	contentPane.add(clockpanel);
+	//	clockpanel.setLayout(null);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 210, 276, 1);
-		clockpanel.add(panel_1);
+	//	clockpanel.add(panel_1);
 		panel_1.setLayout(null);
 User user =	Session.getUser();				//获取登录用户对象		
 String info = "<html><body>" + "<font color=#FFFFFF>你 好：</font>"
 		+ "<font color=yellow><b>" + user.getUserName() + "</b></font>"
 		+ "<font color=#FFFFFF>                欢 迎 登 录</font>" + "</body></html>";	//定义窗体显示内容
-clockpanel.add(getPanel());
+	//	clockpanel.add(getPanel());//应该加时钟的
 JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 		label.setBackground(Color.yellow);
 		label.setBounds(45, 210, 128, 35);
-		clockpanel.add(label);
+	//	clockpanel.add(label);
 
 		CalendarPanel panel_2 = new CalendarPanel();
 		panel_2.setBounds(10, 370, 258, 207);
@@ -124,11 +124,12 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 			backPanel.add(panel_1);
 			JScrollPane scrollPane = new JScrollPane();
 			panel_1.add(scrollPane);
-		/*
+		
 			JScrollPane scrollPane_1 = new JScrollPane();
 			scrollPane_1.setBackground(new Color(71,201,223));
 			scrollPane_1.setBounds(0, 0, 138, 334);
 			panel_1.add(scrollPane_1);
+			/*
 			DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(
 					"基本档案管理1");
 			DefaultMutableTreeNode childNode1 = new DefaultMutableTreeNode(
@@ -146,7 +147,7 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 			tree = new JTree(rootNode);
 			
 			scrollPane_1.setColumnHeaderView(tree);
-			
+		
 			final JPanel sellPanel = new JPanel();
 			sellPanel.setBackground(new Color(71,201,223));
 			sellPanel.setBounds(138, 0, 473, 343);
@@ -213,6 +214,7 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 		return moduleButtonGroup;
 	}
 
+/*
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new ClockPanel();
@@ -220,7 +222,7 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 		}
 		return panel;
 	}
-
+*/
 public BGPanel getJPanel() {
 	if (jPanel == null) {
 		GridLayout gridLayout = new GridLayout();	//定义网格布局管理器

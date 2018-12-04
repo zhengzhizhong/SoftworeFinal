@@ -6,11 +6,7 @@ import java.awt.event.*;
 import java.io.Serializable;
 import javax.swing.*;
 
-/**
- * 移动面板
- * 
- * @author 
- */
+//移动面板
 public class SmallScrollPanel extends BGPanel {
     private static final long serialVersionUID = 3592329256836525981L;
     private AlphaScrollPane alphaScrollPane;// 滚动面板
@@ -20,9 +16,8 @@ public class SmallScrollPanel extends BGPanel {
     private ImageIcon icon1;
     private ImageIcon icon2;
     
-    /**
-     * 构造方法
-     */
+    //* 构造方法
+ 
 public SmallScrollPanel() {
     scrollMouseAdapter = new ScrollMouseAdapter();// 初始化处理器
     // 初始化程序用图
@@ -33,9 +28,8 @@ public SmallScrollPanel() {
     initialize();// 调用初始化方法
 }
     
-    /**
-     * 初始化程序界面的方法
-     */
+    // * 初始化程序界面的方法
+
 private void initialize() {
     BorderLayout borderLayout = new BorderLayout();
     borderLayout.setHgap(0);
@@ -50,11 +44,8 @@ private void initialize() {
     this.add(getRightScrollButton(), BorderLayout.EAST);
 }
     
-    /**
-     * 创建滚动面板
-     * 
-     * @return
-     */
+    // 创建滚动面板
+
     public AlphaScrollPane getAlphaScrollPanel() {
         if (alphaScrollPane == null) {
             alphaScrollPane = new AlphaScrollPane();
@@ -79,11 +70,8 @@ private void initialize() {
         alphaScrollPane.setViewportView(view);
     }
     
-    /**
-     * 滚动微调处理器
-     * 
-     * @author 
-     */
+    //* 滚动微调处理器
+
     private class ScrollButtonShowListener extends ComponentAdapter implements
             Serializable {
         private static final long serialVersionUID = 814596372430146361L;
@@ -108,11 +96,8 @@ private void initialize() {
         }
     }
     
-    /**
-     * 创建左侧微调按钮
-     * 
-     * @return javax.swing.JButton
-     */
+    //* 创建左侧微调按钮
+
 private JButton getLeftScrollButton() {
     if (leftScrollButton == null) {
         leftScrollButton = new JButton();
@@ -141,11 +126,8 @@ private JButton getLeftScrollButton() {
     return leftScrollButton;
 }
     
-    /**
-     * 创建右侧滚动微调按钮
-     * 
-     * @return javax.swing.JButton
-     */
+    // 创建右侧滚动微调按钮
+
     private JButton getRightScrollButton() {
         if (rightScrollButton == null) {
             rightScrollButton = new JButton();
@@ -174,11 +156,8 @@ private JButton getLeftScrollButton() {
         return rightScrollButton;
     }
     
-    /**
-     * 左右微调按钮的事件监听器
-     * 
-     * @author 
-     */
+    //左右微调按钮的事件监听器
+
 private final class ScrollMouseAdapter extends MouseAdapter implements
         Serializable {
     private static final long serialVersionUID = 5589204752770150732L;
@@ -195,12 +174,14 @@ private final class ScrollMouseAdapter extends MouseAdapter implements
         } else {
             scrollMoved(1);
         }
-    }        
+    }   
+
     /**
      * 移动滚动条的方法
      * @param orientation
      *            移动方向 -1是左或上移动，1是右或下移动
      */
+
     private void scrollMoved(final int orientation) {
         new Thread() {// 开辟新的线程
             // 保存原有滚动条的值

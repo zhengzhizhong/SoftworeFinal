@@ -138,7 +138,7 @@ deleteButton.addActionListener(new ActionListener() {
 		JLabel label = new JLabel("查询条件：");
 		label.setBounds(79, 72, 68, 15);
 		add(label);
-		String[] name = {"客户","订单号","交货日期"};
+		String[] name = {"货品名称","订单号","交货日期"};
 		final JComboBox comboBox = new JComboBox(name);
 		comboBox.setBounds(143, 66, 81, 21);
 		add(comboBox);

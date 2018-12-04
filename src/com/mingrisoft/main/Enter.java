@@ -64,7 +64,7 @@ public class Enter extends JFrame {
 		setResizable(false);
 		setLocationRelativeTo(null);// 窗体居中
 		setTitle("登录窗体");
-		setBounds(100, 100, 559, 285);
+		setBounds(100, 00, 600, 400);//559 285
 		contentPane =  getLoginPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -83,7 +83,7 @@ public class Enter extends JFrame {
 		            getClass().getResource("login.png")));// 设置面板背景图片
 			contentPane.setLayout(null);
 			JPanel panel = new ClockPanel();
-			panel.setBounds(377, 54, 151, 142);
+			panel.setBounds(420, 110, 151, 142);//(377, 54, 151, 142);
 			contentPane.add(panel);
 			JLabel userNameLabel = new JLabel("用户名：");
 			userNameLabel.setBounds(40, 116, 54, 15);
@@ -122,7 +122,7 @@ enterButton.addActionListener(new ActionListener() {		//按钮的单击事件
 		}
 	}
 });
-			enterButton.setBounds(253, 116, 93, 64);
+			enterButton.setBounds(280, 130, 93, 64);//253, 116, 93, 64
 			contentPane.add(enterButton);
 			URL urlclose = getClass().getResource("close.png");
 			ImageIcon imageIconclose = new ImageIcon(urlclose);

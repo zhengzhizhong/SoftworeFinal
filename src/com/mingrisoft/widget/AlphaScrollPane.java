@@ -13,10 +13,12 @@ public class AlphaScrollPane extends JScrollPane {
     private boolean borderPaint = false;
     private boolean headerOpaquae = true;
     private boolean viewportBorderPaint = false;
-    
+
+
     /**
      * This is the default constructor
      */
+
     public AlphaScrollPane() {
         super();
         initialize();
@@ -27,6 +29,7 @@ public class AlphaScrollPane extends JScrollPane {
      * 
      * @return void
      */
+
     private void initialize() {
         this.setSize(300, 200);
         setBackground(new Color(151, 188, 229));
@@ -46,6 +49,7 @@ public class AlphaScrollPane extends JScrollPane {
               JComponent view = (JComponent) header.getView();
                 /*     if (view instanceof CTable)
                         view.setOpaque(isOpaque());  */
+
                     header.setOpaque(headerOpaquae);
                 }
                 getViewport().setOpaque(isOpaque());// 使滚动视图透明

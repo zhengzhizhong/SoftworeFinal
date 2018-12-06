@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 import javax.swing.*;
 
-
+//给图片拍好序列
 public class BGPanel extends JPanel implements Serializable {
     
     private static final long serialVersionUID = 1L;
@@ -30,7 +30,7 @@ public class BGPanel extends JPanel implements Serializable {
      * @return void
      */
     private void initialize() {
-        this.setSize(new Dimension(300, 200));
+        this.setSize(new Dimension(300, 200));//shezhi高度 宽度
         this.setLayout(new GridBagLayout());
     }
     

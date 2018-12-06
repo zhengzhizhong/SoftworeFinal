@@ -30,7 +30,7 @@ import com.mingrisoft.panel.StockPanel;
 //import com.mingrisoft.panel.WarePanel;
 import com.mingrisoft.widget.BGPanel;
 import com.mingrisoft.widget.CalendarPanel;
-import com.mingrisoft.widget.SmallScrollPanel;
+     import com.mingrisoft.widget.SmallScrollPanel;
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -45,7 +45,7 @@ import java.awt.event.ActionEvent;
 public class RemoveButtomFrame extends JFrame {
 	private MyJPanel contentPane;
 	private BGPanel backPanel;
-	private SmallScrollPanel moduleButtonGroup = null;
+	private JPanel moduleButtonGroup = null;
 	private JTree tree;
 	private JPanel panel;
 //	FeelWarePanel panelFeel = new FeelWarePanel();
@@ -100,6 +100,8 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 		
 	}
 
+	
+	//属于66
 	private BGPanel getContentPanel() {
 		if (backPanel == null) {
 			backPanel = new BGPanel();
@@ -129,100 +131,28 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 			scrollPane_1.setBackground(new Color(71,201,223));
 			scrollPane_1.setBounds(0, 0, 138, 334);
 			panel_1.add(scrollPane_1);
-			/*
-			DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(
-					"基本档案管理1");
-			DefaultMutableTreeNode childNode1 = new DefaultMutableTreeNode(
-					"供货商管理1");
-			DefaultMutableTreeNode childNode2 = new DefaultMutableTreeNode(
-					"销售商管理1");
-			DefaultMutableTreeNode childNode3 = new DefaultMutableTreeNode(
-					"货品档案管理1");
-			DefaultMutableTreeNode childNode4 = new DefaultMutableTreeNode(
-					"仓库管理1"); 
-			rootNode.add(childNode1);
-			rootNode.add(childNode2);
-			rootNode.add(childNode3);
-			rootNode.add(childNode4);
-			tree = new JTree(rootNode);
-			
-			scrollPane_1.setColumnHeaderView(tree);
-		
-			final JPanel sellPanel = new JPanel();
-			sellPanel.setBackground(new Color(71,201,223));
-			sellPanel.setBounds(138, 0, 473, 343);
-			sellPanel.setLayout(null);
-			panel_1.add(sellPanel);
-		
-			tree.getSelectionModel().setSelectionMode(
-					TreeSelectionModel.SINGLE_TREE_SELECTION);
-			TreeSelectionModel treeSelectionModel = tree.getSelectionModel();
-			treeSelectionModel
-					.setSelectionMode(TreeSelectionModel.CONTIGUOUS_TREE_SELECTION);
-			tree.addTreeSelectionListener(new TreeSelectionListener() {
-				@Override
-				public void valueChanged(TreeSelectionEvent e) {
-				/*		if (!tree.isSelectionEmpty()) {
-						TreePath selectionPaths = tree.getSelectionPath();
-						Object path = selectionPaths.getLastPathComponent();
-						DefaultMutableTreeNode node = (DefaultMutableTreeNode) path;
-						String userObject = (String) node.getUserObject();
-						repaint();
-						if (userObject.equals("供货商管理")) {
-							fristLabel.setText("供货商管理");
-							sellPanel.removeAll();
-							sellPanel.add(panelFeel.getMessage());
 
-						} else if (userObject.equals("销售商管理")) {
-							fristLabel.setText("销售商管理");
-							sellPanel.removeAll();
-							SellPanel sell = new SellPanel();
-							sellPanel.add(sell.getMessage());
-							repaint();
-						} else if (userObject.equals("货品档案管理")) {
-							fristLabel.setText("货品档案管理");
-							sellPanel.removeAll();
-							WarePanel warePanel = new WarePanel();
-							sellPanel.add(warePanel.getMessage());
-							repaint();
-						} else if (userObject.equals("仓库管理")) {
-							fristLabel.setText("仓库管理");
-							sellPanel.removeAll();
-							DepotPanel depotPanel = new DepotPanel();
-							sellPanel.add(depotPanel.getMessage());
-							repaint();
-						}
-					}
-				}
-			});
-*/
 		}
 		return backPanel;
 	}
 
-	private SmallScrollPanel getModuleButtonGroup() {
+	
+
+	
+	//属于66
+	private JPanel getModuleButtonGroup() {
 		if (moduleButtonGroup == null) {
-			moduleButtonGroup = new SmallScrollPanel();// 创建移动面板
+			moduleButtonGroup = new JPanel();// 创建移动面板
 			moduleButtonGroup.setBounds(250, 20, 434, 68);
 			moduleButtonGroup.setOpaque(false);
 			// 将按钮组面板作为移动面板的视图
-			moduleButtonGroup.setViewportView(getJPanel());
-			moduleButtonGroup.getAlphaScrollPanel()
-					.setViewportView(getJPanel());
-			// 添加鼠标事件监听器
+			moduleButtonGroup.add(getJPanel());
+			
 		}
 		return moduleButtonGroup;
 	}
 
-/*
-	private JPanel getPanel() {
-		if (panel == null) {
-			panel = new ClockPanel();
-			panel.setBounds(56, 35, 153, 148);
-		}
-		return panel;
-	}
-*/
+	//属于143,143属于66
 public BGPanel getJPanel() {
 	if (jPanel == null) {
 		GridLayout gridLayout = new GridLayout();	//定义网格布局管理器
@@ -232,6 +162,7 @@ public BGPanel getJPanel() {
 		jPanel = new BGPanel();						//
 		// 设置布局管理器
 		jPanel.setLayout(gridLayout);
+		
 		// 设置初始大小
 		jPanel.setPreferredSize(new Dimension(400, 50));
 		jPanel.setOpaque(false);
@@ -255,24 +186,8 @@ public BGPanel getJPanel() {
 	}
 	return jPanel;
 }
-/*
-	// 基本档案管理按钮
-private GlassButton getWorkSpaceButton() {
-	if (workSpaceButton == null) {
-		workSpaceButton = new GlassButton();
-		workSpaceButton.setActionCommand("基本档案管理");		//设置按钮的动作命令
-		workSpaceButton.setIcon(new ImageIcon(getClass().getResource(
-				"/com/mingrisoft/frame/buttonIcons/myWorkSpace.png")));	//定义按钮的初始化背景
-		ImageIcon icon = new ImageIcon(getClass().getResource(
-				"/com/mingrisoft/frame/buttonIcons/myWorkSpace2.png"));	//创建图片对象
-		workSpaceButton.setRolloverIcon(icon);		//设置按钮的翻转图片
-		workSpaceButton.setSelectedIcon(icon);		//设置按钮被选中时显示图片
-		workSpaceButton.setSelected(true);			
-		workSpaceButton.addActionListener(new toolsButtonActionAdapter());	//按钮的监听器
-	}
-	return workSpaceButton;
-}
-*/
+
+//属于158   158-143-66
 	// 采购进货管理按钮
 	private GlassButton getProgressButton() {
 		if (progressButton == null) {
@@ -290,6 +205,7 @@ private GlassButton getWorkSpaceButton() {
 		return progressButton;
 	}
 
+	//属于158   158-143-66
 	// 仓库ruku管理
 	private GlassButton getrukuButton() {
 		if (bookProjectButton == null) {
@@ -307,6 +223,8 @@ private GlassButton getWorkSpaceButton() {
 		return bookProjectButton;
 	}
 
+	
+	//属于158   158-143-66	
 	// 仓库出库管理
 	private GlassButton getchukuButton() {
 		if (chukuButton == null) {
@@ -322,66 +240,13 @@ private GlassButton getWorkSpaceButton() {
 		}
 		return chukuButton;
 	}
-	/*
-	// 人员管理系统
-	private GlassButton getPersonnelManagerButton() {
-		if (personnelManagerButton == null) {
-			personnelManagerButton = new GlassButton();
-			// personnelManagerButton.setText("人员管理");
-			personnelManagerButton.setActionCommand("查询及统计系统");
-			// personnelManagerButton.setCursor(new
-			// Cursor(Cursor.DEFAULT_CURSOR));
-			ImageIcon imageIcon = new ImageIcon(getClass().getResource(
-					"/com/mingrisoft/frame/buttonIcons/person2.png"));
-			personnelManagerButton.setIcon(imageIcon);
-			ImageIcon icon = new ImageIcon(getClass().getResource(
-					"/com/mingrisoft/frame/buttonIcons/person1.png"));
-			personnelManagerButton.setRolloverIcon(icon);
-			personnelManagerButton.setSelectedIcon(icon);
-			personnelManagerButton.setFocusPainted(false);
-			personnelManagerButton
-					.addActionListener(new toolsButtonActionAdapter());
-		}
-		return personnelManagerButton;
-	}
 
-	// 部门管理系统
-	private GlassButton getDeptManagerButton() {
-		if (deptManagerButton == null) {
-			deptManagerButton = new GlassButton();
-
-			deptManagerButton.setActionCommand("查询及统计系统");
-			// personnelManagerButton.setCursor(new
-			// Cursor(Cursor.DEFAULT_CURSOR));
-			ImageIcon imageIcon = new ImageIcon(getClass().getResource(
-					"/com/mingrisoft/frame/buttonIcons/deptButton.png"));
-			deptManagerButton.setIcon(imageIcon);
-			ImageIcon icon = new ImageIcon(getClass().getResource(
-					"/com/mingrisoft/frame/buttonIcons/deptButton2.png"));
-			deptManagerButton.setRolloverIcon(icon);
-			deptManagerButton.setSelectedIcon(icon);
-			deptManagerButton.setFocusPainted(false);
-			deptManagerButton.addActionListener(new toolsButtonActionAdapter());
-		}
-		return deptManagerButton;
-	}
-*/
 	class toolsButtonActionAdapter implements ActionListener {
 
 		@Override
 	
 		public void actionPerformed(ActionEvent e) {
-			/*		if (e.getSource() == workSpaceButton) {
-				backPanel.removeAll();
-				backPanel.add(label_1);
-				fristLabel.setBounds(133, 38, 123, 15);
-				backPanel.add(fristLabel);
-				panel_1.setBounds(10, 63, 611, 376);
-				backPanel.add(panel_1);
-				fristLabel.setText("基本档案管理");
-				repaint();
-			}
-			*/
+	
 			if (e.getSource() == progressButton) {
 				backPanel.removeAll();
 				backPanel.add(label_1);
@@ -415,28 +280,7 @@ private GlassButton getWorkSpaceButton() {
 				fristLabel.setText("仓库出库");
 				repaint();
 			}
-			/*
-			if (e.getSource() == deptManagerButton) {
-				backPanel.removeAll();
-				backPanel.add(label_1);
-				fristLabel.setBounds(133, 38, 123, 15);
-				backPanel.add(fristLabel);
-				panel_1.setBounds(10, 63, 611, 386);
-				DeptPanel outPanel = new DeptPanel();
-				backPanel.add(outPanel);
-				fristLabel.setText("部门管理");
-				repaint();
-			}
-			
-			
-			if (e.getSource() == personnelManagerButton) {
-				backPanel.removeAll();			
-				panel_1.setBounds(10, 63, 611, 386);
-				PersonnelPanel panel = new PersonnelPanel();
-				backPanel.add(panel);				
-				repaint();
-			}
-			*/
+	
 		}
 
 	}

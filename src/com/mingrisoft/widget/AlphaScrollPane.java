@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
+//¹ö¶¯Ãæ°å
 
 public class AlphaScrollPane extends JScrollPane {
     

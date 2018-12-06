@@ -30,7 +30,7 @@ import com.mingrisoft.panel.StockPanel;
 //import com.mingrisoft.panel.WarePanel;
 import com.mingrisoft.widget.BGPanel;
 import com.mingrisoft.widget.CalendarPanel;
-     import com.mingrisoft.widget.SmallScrollPanel;
+  //   import com.mingrisoft.widget.SmallScrollPanel;
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.Dimension;
 import java.awt.GridLayout;

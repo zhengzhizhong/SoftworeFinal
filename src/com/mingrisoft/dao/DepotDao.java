@@ -7,10 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.*;
 import com.mingrisoft.bean.*;
-/*
-import com.mingrisoft.bean.Depot;
-import com.mingrisoft.bean.Provide;
-*/
+
 public class DepotDao {
 	// 定义添加仓库信息方法
 	GetConnection connection = new GetConnection();
@@ -28,27 +25,7 @@ public class DepotDao {
 			e.printStackTrace();
 		}
 	}
-	/*
-	// 定义查询仓库表中全部数据方法
-	public List selectDepot() {
-		List list = new ArrayList<Provide>();
-		conn = connection.getCon();
-		try {
-			Statement statement = conn.createStatement();
-			ResultSet rest = statement.executeQuery("select * from tb_depot");
-			while (rest.next()) {
-				Depot depot = new Depot();
-				depot.setId(rest.getInt(1));
-				depot.setManage(rest.getString(2));
-				depot.setFunctional(rest.getString(3));
-				list.add(depot);
-			}			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return list;
-	}
-*/
+
 	// 编写按编号查询仓库信息方法
 	public Depot selectDepotByid(int id) {
 		Depot depot = new Depot();
@@ -67,50 +44,7 @@ public class DepotDao {
 		}
 		return depot;
 	}
-/*
-	// 定义按仓库管理员查询仓库信息方法
-	public List selectDepotByManage(String manage) {
-		
-		conn = connection.getCon();
-		List list = new ArrayList<Provide>();
-		try {
-			Statement statement = conn.createStatement();
-			String sql = "select * from tb_depot where manage = '" + manage +"'";
-			ResultSet rest = statement.executeQuery(sql);			
-			while (rest.next()) {
-				Depot depot = new Depot();
-				depot.setId(rest.getInt(1));
-				depot.setManage(rest.getString(2));
-				depot.setFunctional(rest.getString(3));
-				list.add(depot);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return list;
-	}
-	
-	// 定义按仓库管理员和仓库编号查询仓库信息方法
-	public List selectDepotByManageAndId(int id,String manage) {		
-		conn = connection.getCon();
-		List list = new ArrayList<Provide>();
-		try {
-			Statement statement = conn.createStatement();
-			String sql = "select * from tb_depot where manage = '" + manage +"' and id = "+id;
-			ResultSet rest = statement.executeQuery(sql);			
-			while (rest.next()) {
-				Depot depot = new Depot();
-				depot.setId(rest.getInt(1));
-				depot.setManage(rest.getString(2));
-				depot.setFunctional(rest.getString(3));
-				list.add(depot);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return list;
-	}
-*/
+
 	// 定义按仓库编号查询仓库信息方法
 	public Depot selectDepotById(int id) {		
 		conn = connection.getCon();

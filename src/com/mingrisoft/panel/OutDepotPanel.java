@@ -1,4 +1,4 @@
- package com.mingrisoft.panel;
+package com.mingrisoft.panel;
 
 import static javax.swing.BorderFactory.createTitledBorder;
 

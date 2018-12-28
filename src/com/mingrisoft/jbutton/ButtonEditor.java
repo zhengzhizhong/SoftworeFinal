@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import com.mingrisodft.util.GetDate;
+//import com.mingrisodft.util.GetDate;
 import com.mingrisoft.bean.*;//Ìí¼ÓµÄ
 /*
 import com.mingrisoft.bean.Depot;
@@ -54,9 +54,7 @@ public class ButtonEditor extends DefaultCellEditor {
    	            System.out.println("did:"+did);
    	            joinDepot.setdId(did);
    	            joinDepot.setWareName(stock.getsName());
-   	            GetDate getDate = new GetDate();
-   	            String date = getDate.getDateTime();
-   	            joinDepot.setJoinTime(date);
+   	       
    	            System.out.println();
 	            joinDepot.setWeight(Float.parseFloat(stock.getCount()));
    	            joinDepot.setRemark("ÎÞ");

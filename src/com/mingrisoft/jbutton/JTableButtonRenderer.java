@@ -1,3 +1,4 @@
+
 package com.mingrisoft.jbutton;
 
 import java.awt.*;
@@ -82,9 +83,7 @@ class JTableButtonMouseListener implements MouseListener {
   buttonEvent = (MouseEvent) SwingUtilities.convertMouseEvent(__table, e,
     button);
   button.dispatchEvent(buttonEvent);
-  // This is necessary so that when a button is pressed and released
-  // it gets rendered properly. Otherwise, the button may still appear
-  // pressed down when it has been released.
+
   __table.repaint();
  } 
 
@@ -112,4 +111,5 @@ class JTableButtonMouseListener implements MouseListener {
   __forwardEventToButton(e);
  }
 }
+
 

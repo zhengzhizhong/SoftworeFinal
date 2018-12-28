@@ -1,5 +1,5 @@
 package com.mingrisoft.panel;
-
+//采购订单的检测是否入库功能
 import static javax.swing.BorderFactory.createTitledBorder;
 
 import javax.swing.JCheckBox;
@@ -12,8 +12,6 @@ import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
 import com.mingrisoft.archives.*;   //自己添加的
-//import com.mingrisoft.archives.InserStockFrame;
-//import com.mingrisoft.archives.UpdateDepotFrame;
 import com.mingrisoft.archives.UpdateStockFrame;
 import com.mingrisoft.bean.Stock;
 import com.mingrisoft.dao.StockDao;
@@ -50,7 +48,7 @@ public class JButtonTablePanel extends JPanel {
 		scrollPane.setBounds(43, 116, 520, 211);
 		add(scrollPane);	
 		dm.setDataVector(new Object[][]{{"","","","","","","",""}},
-	                     new Object[]{"是否入库","编号","客户","订单号","交货日期","商品名","金额","数量"});	                     
+	                     new Object[]{"是否入库","编号","商品名","订单号","交货日期","客户","金额","数量"});	                     
 		dm.removeRow(0);
 		table = new JTable(dm);
 		scrollPane.setViewportView(table);		 

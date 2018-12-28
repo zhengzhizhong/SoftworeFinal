@@ -45,7 +45,7 @@ public class InserJoinDepotFrame extends JFrame {
 	private JLabel label_3;
 	JoinDepotDao dao = new JoinDepotDao();
 	private JComboBox dIdcomboBox;
-	JComboBox oIdcomboBox;
+	JComboBox oIdcomboBox;             //
 	JTextArea remarkTextArea = new JTextArea();
 	private JTextField wighttextField;
 	private JLabel label_4;	
@@ -96,8 +96,8 @@ public class InserJoinDepotFrame extends JFrame {
 		JButton insertButton = new JButton("Ìí¼Ó");
 		insertButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {				
-				String did = dIdcomboBox.getSelectedItem().toString();
-				String oId = oIdcomboBox.getSelectedItem().toString();
+				String did = dIdcomboBox.getSelectedItem().toString();           
+				String oId = oIdcomboBox.getSelectedItem().toString();            //
 				String wName = wNameTextField.getText();
 				String joinTime = joinTimeTextField.getText();
 				String wight = wighttextField.getText();
@@ -116,6 +116,7 @@ public class InserJoinDepotFrame extends JFrame {
 				}
 				JoinDepot joinDepot = new JoinDepot();
 				joinDepot.setdId(Integer.parseInt(did));
+				joinDepot.setoId(oId);
 				joinDepot.setJoinTime(joinTime);
 				joinDepot.setWareName(wName);
 				joinDepot.setWeight(depotWight);
@@ -155,9 +156,9 @@ public class InserJoinDepotFrame extends JFrame {
 		label_3 = new JLabel("*");
 		label_3.setForeground(Color.RED);
 		label_3.setBounds(559, 97, 7, 15);
-		contentPane.add(label_3);
-		List list = dao.selectOidId();
-		String [] orderId = new String[list.size()+1];
+		contentPane.add(label_3);                      
+		List list = dao.selectOidId();                       //
+		String [] orderId = new String[list.size()+1];           //doderid
 		orderId[0] = "";
 		for(int i = 0;i<list.size();i++){
 			orderId[i+1 ]=  (String)list.get(i);
@@ -176,11 +177,11 @@ public class InserJoinDepotFrame extends JFrame {
 		remarkTextArea.setBounds(114, 193, 435, 112);
 		contentPane.add(remarkTextArea);
 		List listDid = dao.selectDepotId();
-		Integer[] did = new Integer [listDid.size()]; 
+		Integer[] did = new Integer [listDid.size()];             
 		for(int j = 0;j<listDid.size();j++){
 			did[j] = (Integer)listDid.get(j);
 		}
-		dIdcomboBox = new JComboBox(did);
+		dIdcomboBox = new JComboBox(did);                           
 		dIdcomboBox.setBounds(385, 52, 164, 21);
 		contentPane.add(dIdcomboBox);
 		

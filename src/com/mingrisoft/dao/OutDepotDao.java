@@ -84,7 +84,7 @@ public class OutDepotDao {
 	// 定义按仓库编号查询仓库出库信息方法
 	public List selectOutDepotByDid(int did) {		
 		conn = connection.getCon();
-		List list = new ArrayList<JoinDepot>();
+		List list = new ArrayList<OutDepot>();//JoinDepot
 		try {
 			Statement statement = conn.createStatement();
 			String sql = "select * from tb_outDepot where dId = " + did +"";
@@ -108,10 +108,10 @@ public class OutDepotDao {
 	// 定义按仓库出库时间和仓库编号查询出库信息方法
 	public List selectOutDepotByTime(String outTime,int did) {		
 		conn = connection.getCon();
-		List list = new ArrayList<JoinDepot>();//原本Provide
+		List list = new ArrayList<OutDepot>();//原本Provide
 		try {
 			Statement statement = conn.createStatement();
-			String sql = "select * from tb_outDepot where joinTime = '" + outTime +"' and did = "+did;
+			String sql = "select * from tb_outDepot where outDate = '" + outTime +"' and did = "+did;
 			ResultSet rest = statement.executeQuery(sql);			
 			while (rest.next()) {
 				OutDepot depot = new OutDepot();

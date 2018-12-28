@@ -17,7 +17,7 @@ import javax.swing.tree.TreePath;
 import javax.swing.tree.TreeSelectionModel;
 import com.mingrisodft.util.Session;
 import com.mingrisoft.bean.User;
-import com.mingrisoft.panel.ClockPanel;
+//import com.mingrisoft.panel.ClockPanel;
 //import com.mingrisoft.panel.DepotPanel;
 //import com.mingrisoft.panel.DeptPanel;
 //import com.mingrisoft.panel.FeelWarePanel;
@@ -29,7 +29,7 @@ import com.mingrisoft.panel.OutDepotPanel;
 import com.mingrisoft.panel.StockPanel;
 //import com.mingrisoft.panel.WarePanel;
 import com.mingrisoft.widget.BGPanel;
-import com.mingrisoft.widget.CalendarPanel;
+//import com.mingrisoft.widget.CalendarPanel;
   //   import com.mingrisoft.widget.SmallScrollPanel;
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.Dimension;
@@ -57,12 +57,9 @@ public class RemoveButtomFrame extends JFrame {
 	private GlassButton progressButton = null;
 	private GlassButton bookProjectButton = null;
 	private GlassButton chukuButton = null;
-//	private GlassButton personnelManagerButton = null;
-//	private GlassButton deptManagerButton = null;
+
 	JLabel label_1 = new JLabel("您当前的位置是：");
-	/**
-	 * Create the frame.
-	 */
+
 	public RemoveButtomFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 934, 625);
@@ -70,32 +67,23 @@ public class RemoveButtomFrame extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.add(getModuleButtonGroup());
-		setTitle("超市管理系统");
+		setTitle("超市仓库管理系统");
 		contentPane.setLayout(null);
 		setResizable(false);
-	//	JPanel clockpanel = new JPanel();
-	//	clockpanel.setBackground(new Color(71,201,223));
-	//	clockpanel.setBounds(10, 124, 258, 245);
-	//	contentPane.add(clockpanel);
-	//	clockpanel.setLayout(null);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 210, 276, 1);
-	//	clockpanel.add(panel_1);
-		panel_1.setLayout(null);
-User user =	Session.getUser();				//获取登录用户对象		
-String info = "<html><body>" + "<font color=#FFFFFF>你 好：</font>"
-		+ "<font color=yellow><b>" + user.getUserName() + "</b></font>"
-		+ "<font color=#FFFFFF>                欢 迎 登 录</font>" + "</body></html>";	//定义窗体显示内容
-	//	clockpanel.add(getPanel());//应该加时钟的
-JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
-		label.setBackground(Color.yellow);
-		label.setBounds(45, 210, 128, 35);
-	//	clockpanel.add(label);
 
-		CalendarPanel panel_2 = new CalendarPanel();
-		panel_2.setBounds(10, 370, 258, 207);
-		contentPane.add(panel_2);
+		panel_1.setLayout(null);
+		User user =	Session.getUser();				//获取登录用户对象		
+		String info = "<html><body>" + "<font color=#0000FF>你 好：  </font>"
+		+ "<font color=yellow><b>" + user.getUserName() + "</b></font>"
+		+ "<font color=#0000FF>                欢 迎 登 录</font>" + "</body></html>";	//定义窗体显示内容
+	
+		JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
+		label.setBackground(Color.yellow);
+		label.setBounds(45, 210, 160, 60);
+		contentPane.add(label);
 		contentPane.add(getContentPanel()); // 在主窗体中添加
 		
 	}
@@ -145,7 +133,7 @@ JLabel label = new JLabel(info);			//定义显示指定内容的标签对象
 			moduleButtonGroup = new JPanel();// 创建移动面板
 			moduleButtonGroup.setBounds(250, 20, 434, 68);
 			moduleButtonGroup.setOpaque(false);
-			// 将按钮组面板作为移动面板的视图
+			
 			moduleButtonGroup.add(getJPanel());
 			
 		}
@@ -167,22 +155,20 @@ public BGPanel getJPanel() {
 		jPanel.setPreferredSize(new Dimension(400, 50));
 		jPanel.setOpaque(false);
 		// 添加按钮
-	//	jPanel.add(getWorkSpaceButton(), null);
+
 		jPanel.add(getProgressButton(), null);
 		jPanel.add(getrukuButton(), null);
 		jPanel.add(getchukuButton(), null);
-	//	jPanel.add(getPersonnelManagerButton(), null);
-	//	jPanel.add(getDeptManagerButton(), null);
+	
 		if (buttonGroup == null) {
 			buttonGroup = new ButtonGroup();
 		}
-		// 把所有按钮添加到一个组控件中
+		
 		buttonGroup.add(getProgressButton());
-	//	buttonGroup.add(getWorkSpaceButton());
+	
 		buttonGroup.add(getrukuButton());
 		buttonGroup.add(getchukuButton());
-	//	buttonGroup.add(getPersonnelManagerButton());
-	//	buttonGroup.add(getDeptManagerButton());
+	
 	}
 	return jPanel;
 }
@@ -211,7 +197,7 @@ public BGPanel getJPanel() {
 		if (bookProjectButton == null) {
 			bookProjectButton = new GlassButton();
 			bookProjectButton.setActionCommand("仓库入库");
-			// bookProjectButton.setText("图书计划");
+
 			ImageIcon icon = new ImageIcon(getClass().getResource(
 					"/com/mingrisoft/frame/buttonIcons/ruku2.png"));
 			bookProjectButton.setSelectedIcon(icon);
@@ -231,11 +217,11 @@ public BGPanel getJPanel() {
 			chukuButton = new GlassButton();
 			chukuButton.setActionCommand("仓库出库");
 			ImageIcon icon = new ImageIcon(getClass().getResource(
-					"/com/mingrisoft/frame/buttonIcons/chuku1.png"));
+					"/com/mingrisoft/frame/buttonIcons/chuku2.png"));
 			chukuButton.setSelectedIcon(icon);
 			chukuButton.setRolloverIcon(icon);
 			chukuButton.setIcon(new ImageIcon(getClass().getResource(
-					"/com/mingrisoft/frame/buttonIcons/chuku2.png")));
+					"/com/mingrisoft/frame/buttonIcons/chuku1.png")));
 			chukuButton.addActionListener(new toolsButtonActionAdapter());
 		}
 		return chukuButton;

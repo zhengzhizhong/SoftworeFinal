@@ -8,11 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import com.mingrisoft.bean.*;
-/*
-import com.mingrisoft.bean.Depot;
-import com.mingrisoft.bean.JoinDepot;
-import com.mingrisoft.bean.Provide;
-*/
+
 public class JoinDepotDao {
 	// 定义添加仓库信息方法
 	GetConnection connection = new GetConnection();

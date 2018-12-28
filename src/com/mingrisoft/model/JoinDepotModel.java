@@ -1,4 +1,5 @@
 package com.mingrisoft.model;
+//表格模式 输出
 public class JoinDepotModel extends javax.swing.table.DefaultTableModel {
 	Class[] types = new Class[] { java.lang.Object.class,
 			java.lang.String.class, java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class,java.lang.String.class};

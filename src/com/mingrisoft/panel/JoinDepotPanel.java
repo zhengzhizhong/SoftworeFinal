@@ -57,7 +57,7 @@ public class JoinDepotPanel extends JPanel {
                         "sansserif", Font.BOLD, 12), new Color(59, 59, 59)));
 		setSize(631, 413);
 		setLayout(null);
-		this.setBackground(new Color(71,201,223));
+		this.setBackground(new Color(71,201,223));//java.awt.Color.Color(int r, int g, int b r - 红色成分。 g - 绿色成分。 b - 蓝色成分。
 		JLabel conditionLabel = new JLabel("订单号：");
 		conditionLabel.setBounds(57, 86, 66, 15);
 		add(conditionLabel);		

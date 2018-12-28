@@ -43,9 +43,7 @@ public class InserStockFrame extends JFrame {
 	private JLabel label_3;
 	private JLabel label_4;
 	private JLabel label_5;	
-	/**
-	 * Create the frame.
-	 */
+
 	public InserStockFrame() {
 		setTitle("添加采购订货窗体");	
 		setBounds(100, 100, 635, 269);
@@ -63,7 +61,7 @@ public class InserStockFrame extends JFrame {
 		contentPane.add(orderIdTextField);
 		orderIdTextField.setColumns(10);
 
-		JLabel nameLabel = new JLabel(" 客  户：");
+		JLabel nameLabel = new JLabel(" 货物名称：");
 		nameLabel.setBounds(315, 55, 60, 15);
 		contentPane.add(nameLabel);
 
@@ -81,7 +79,7 @@ public class InserStockFrame extends JFrame {
 		contentPane.add(dateTextField);
 		dateTextField.setColumns(10);
 
-		wNameLabel = new JLabel("货物名称：");
+		wNameLabel = new JLabel("客户：");
 		wNameLabel.setBounds(315, 97, 72, 15);
 		contentPane.add(wNameLabel);
 

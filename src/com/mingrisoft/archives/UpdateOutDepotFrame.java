@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 
-import com.mingrisodft.util.GetDate;
+//import com.mingrisodft.util.GetDate;
 import com.mingrisoft.bean.*;
 /*
 import com.mingrisoft.bean.JoinDepot;
@@ -55,9 +55,7 @@ public class UpdateOutDepotFrame extends JFrame {
 	JButton button;
 	JComboBox comboBox;
 	OutDepot outDepot = new OutDepot();
-	/**
-	 * Create the frame.
-	 */
+
 	public UpdateOutDepotFrame() {
 		setTitle("修改仓库出库窗体");	
 		setBounds(100, 100, 689, 354);
@@ -202,24 +200,9 @@ public class UpdateOutDepotFrame extends JFrame {
 		label_4.setForeground(Color.RED);
 		label_4.setBounds(311, 77, 7, 15);
 		contentPane.add(label_4);
-		
-		button = new JButton("现在");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(button.getText().equals("清除")){
-					joinTimeTextField.setText("");
-					button.setText("现在");
-				}
-				else{GetDate getDate = new GetDate();
-				String strDate = getDate.getDateTime();
-				joinTimeTextField.setText(strDate);
-				button.setText("清除");
-				}
-			}
-		});
+	
 		joinTimeTextField.setText(outDepot.getOutDate());
-		button.setBounds(566, 73, 71, 23);
-		contentPane.add(button);	
+		
 		List listName = dao.selectOutDepotNames(Integer.parseInt(dIdcomboBox.getSelectedItem().toString()));
 		String [] orderName = new String[listName.size()+1];
 		orderName[0] = "";

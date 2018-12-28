@@ -8,18 +8,21 @@ import java.io.Serializable;
 
 import javax.swing.*;
 
-
+/*JToggleButton，开关按钮。JToggleButton 是 JRadioButton, JCheckBox 的父类，
+ * 主要实现一个按钮的两种状态（选中 和 未选中）来实现开关切换的效果。
+ * 采购 入库 出库只能三选一。
+ */
 public class GlassButton extends JToggleButton implements Serializable {
     
     private final class MouseRollListener extends MouseAdapter implements
             Serializable {
-        @Override
+
         public void mouseExited(MouseEvent e) {
             paintFlag = false;
             repaint();
         }
         
-        @Override
+
         public void mouseEntered(MouseEvent e) {
             paintFlag = true;
             repaint();
@@ -70,4 +73,4 @@ public class GlassButton extends JToggleButton implements Serializable {
             }
         }
     }
-} // @jve:decl-index=0:visual-constraint="10,10"
+}

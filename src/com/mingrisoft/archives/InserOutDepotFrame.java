@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 
-import com.mingrisodft.util.GetDate;
+//import com.mingrisodft.util.GetDate;
 import com.mingrisoft.bean.*;
 /*
 import com.mingrisoft.bean.JoinDepot;
@@ -45,6 +45,7 @@ public class InserOutDepotFrame extends JFrame {
 	private JLabel label_1;
 	private JLabel label_2;
 	private JLabel label_3;
+	JComboBox oIdcomboBox;       //
 	OutDepotDao dao = new OutDepotDao();
 	private JComboBox dIdcomboBox;
 	JTextArea remarkTextArea = new JTextArea();
@@ -52,10 +53,7 @@ public class InserOutDepotFrame extends JFrame {
 	private JLabel label_4;
 	JButton button;
 	JComboBox comboBox;
-	
-	/**
-	 * Create the frame.
-	 */
+
 	public InserOutDepotFrame() {
 		setTitle("添加仓库出库窗体");	
 		setBounds(100, 100, 689, 354);
@@ -82,13 +80,14 @@ public class InserOutDepotFrame extends JFrame {
 		joinTimeTextField.setColumns(10);
 
 		remarkLabel = new JLabel("  备 注：");
-		remarkLabel.setBounds(37, 158, 54, 15);
+		remarkLabel.setBounds(37, 178, 54, 15);
 		contentPane.add(remarkLabel);
 		
 		
 		JButton insertButton = new JButton("添加");
 		insertButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {				
+			public void actionPerformed(ActionEvent e) {	
+				String oId = oIdcomboBox.getSelectedItem().toString();          //
 				String did = dIdcomboBox.getSelectedItem().toString();				
 				String joinTime = joinTimeTextField.getText();
 				String wight = wighttextField.getText();
@@ -161,7 +160,7 @@ public class InserOutDepotFrame extends JFrame {
 		for(int i = 0;i<list.size();i++){
 			orderId[i+1 ]=  (String)list.get(i);
 		}
-		remarkTextArea.setBounds(101, 123, 417, 112);
+		remarkTextArea.setBounds(101, 158, 417, 112);
 		contentPane.add(remarkTextArea);
 		List listDid = jDao.selectDepotId();
 		Integer[] did = new Integer [listDid.size()]; 
@@ -201,23 +200,7 @@ public class InserOutDepotFrame extends JFrame {
 		label_4.setForeground(Color.RED);
 		label_4.setBounds(311, 77, 7, 15);
 		contentPane.add(label_4);
-		
-		button = new JButton("现在");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(button.getText().equals("清除")){
-					joinTimeTextField.setText("");
-					button.setText("现在");
-				}
-				else{GetDate getDate = new GetDate();
-				String strDate = getDate.getDateTime();
-				joinTimeTextField.setText(strDate);
-				button.setText("清除");
-				}
-			}
-		});
-		button.setBounds(566, 73, 71, 23);
-		contentPane.add(button);	
+	
 		List listName = dao.selectOutDepotNames(Integer.parseInt(dIdcomboBox.getSelectedItem().toString()));
 		String [] orderName = new String[listName.size()+1];
 		orderName[0] = "";

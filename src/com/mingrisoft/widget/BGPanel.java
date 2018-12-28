@@ -15,20 +15,12 @@ public class BGPanel extends JPanel implements Serializable {
     public static final int BOTH_FILL = 3;
     public static final int NO_FILL = 0;
     private int iconFill = NO_FILL;
-    
-    /**
-     * This is the default constructor
-     */
+
     public BGPanel() {
         super();
         initialize();
     }
-    
-    /**
-     * This method initializes this
-     * 
-     * @return void
-     */
+
     private void initialize() {
         this.setSize(new Dimension(300, 200));//shezhi高度 宽度
         this.setLayout(new GridBagLayout());
@@ -42,7 +34,7 @@ public class BGPanel extends JPanel implements Serializable {
         this.icon = icon;
     }
     
-    @Override
+
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (icon != null) {
@@ -71,13 +63,7 @@ public class BGPanel extends JPanel implements Serializable {
     public int getIconFill() {
         return iconFill;
     }
-    
-    /**
-     * 设置背景重复方式
-     * 
-     * @param repeat
-     *            重复方式
-     */
+
     public void setIconFill(int iconFill) {
         this.iconFill = iconFill;
     }

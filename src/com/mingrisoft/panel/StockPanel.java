@@ -39,16 +39,13 @@ import java.io.*;
 public class StockPanel extends JPanel {
 	
 	private JTable table;
-	
-	/**
-	 * Create the panel.
-	 */
+
 	public StockPanel() {
 		
 		this.setBackground(new Color(71,201,223));
 		setSize(631, 420);
 		setLayout(null);
-//		String[] name = {"客户","订单号","交货日期"};
+
 		StockDao dao = new StockDao();
 		List list = dao.selectStock();
 		Object obj[][] = new Object[list.size()][list.size()];		
